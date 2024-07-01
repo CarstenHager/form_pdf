@@ -6,12 +6,11 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Mykola Orlenko',
     'author_email' => 'mykola.orlenko@web-spectr.com',
     'author_company' => 'Brightside OÜ / t3brightside.com',
-    'clearCacheOnLoad' => 0,
     'state' => 'stable',
     'version' => '1.3.1',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.0 - 11.5.99',
+            'typo3' => '12.4.0-12.4.99',
             'form' =>  '11.5.0 - 11.5.99'
         ],
     ],

@@ -90,12 +90,12 @@ class CleanerTask extends AbstractTask
      * @param string $days Days
      * @return void
      */
-    public function setDays($days)
+    public function setDays($days): void
     {
         $this->days = $days;
     }
 
-    private function initObjectManager()
+    private function initObjectManager(): void
     {
         if (!$this->objectManager) {
             $this->objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');

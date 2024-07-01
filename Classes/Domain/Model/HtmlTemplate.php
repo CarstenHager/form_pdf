@@ -12,8 +12,8 @@ class HtmlTemplate extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * file
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
+    #[\TYPO3\CMS\Extbase\Annotation\ORM\Cascade(['value' => 'remove'])]
     protected $file = null;
 
     /**
@@ -39,7 +39,7 @@ class HtmlTemplate extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $file
      * @return void
      */
-    public function setFile(\TYPO3\CMS\Extbase\Domain\Model\FileReference $file)
+    public function setFile(\TYPO3\CMS\Extbase\Domain\Model\FileReference $file): void
     {
         $this->file = $file;
     }

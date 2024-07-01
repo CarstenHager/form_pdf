@@ -18,11 +18,7 @@ class PdfService
      */
     protected $objectManager;
 
-    /**
-     * @param \TYPO3\CMS\Extbase\Object\ObjectManagerInterface $objectManager
-     * @internal
-     */
-    public function injectObjectManager(ObjectManagerInterface $objectManager)
+    public function __construct(\TYPO3\CMS\Extbase\Object\ObjectManagerInterface $objectManager)
     {
         $this->objectManager = $objectManager;
     }

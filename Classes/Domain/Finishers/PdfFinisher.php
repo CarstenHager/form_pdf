@@ -33,28 +33,10 @@ class PdfFinisher extends \TYPO3\CMS\Form\Domain\Finishers\AbstractFinisher
      * @var \Brightside\FormPdf\Service\PdfService
      */
     protected $pdfService;
-
-    /**
-     * @param HtmlTemplateRepository $htmlTemplateRepository
-     */
-    public function injectHtmlTemplateRepository(HtmlTemplateRepository $htmlTemplateRepository)
+    public function __construct(\Brightside\FormPdf\Domain\Repository\HtmlTemplateRepository $htmlTemplateRepository, \Brightside\FormPdf\Domain\Repository\PdfTemplateRepository $pdfTemplateRepository, \Brightside\FormPdf\Service\PdfService $pdfService)
     {
         $this->htmlTemplateRepository = $htmlTemplateRepository;
-    }
-
-    /**
-     * @param PdfTemplateRepository $pdfTemplateRepository
-     */
-    public function injectPdfTemplateRepository(PdfTemplateRepository $pdfTemplateRepository)
-    {
         $this->pdfTemplateRepository = $pdfTemplateRepository;
-    }
-
-    /**
-     * @param PdfService $pdfService
-     */
-    public function injectPdfService(PdfService $pdfService)
-    {
         $this->pdfService = $pdfService;
     }
 

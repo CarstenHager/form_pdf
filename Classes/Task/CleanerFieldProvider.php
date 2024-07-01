@@ -64,7 +64,7 @@ class CleanerFieldProvider extends AbstractAdditionalFieldProvider
             $isValid = FALSE;
             $this->addMessage(
                 $this->getLanguageService()->sL('LLL:EXT:form_pdf/Resources/Private/Language/locallang.xlf:form_pdf.tasks.cleaner.empty.days'),
-                \TYPO3\CMS\Core\Messaging\FlashMessage::ERROR
+                \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::ERROR
             );
         }
 
@@ -79,7 +79,7 @@ class CleanerFieldProvider extends AbstractAdditionalFieldProvider
      * @param \TYPO3\CMS\Scheduler\Task\AbstractTask $task Reference to the current task object
      * @return void
      */
-    public function saveAdditionalFields(array $submittedData, \TYPO3\CMS\Scheduler\Task\AbstractTask $task)
+    public function saveAdditionalFields(array $submittedData, \TYPO3\CMS\Scheduler\Task\AbstractTask $task): void
     {
         /** @var \Brightside\FormPdf\Task\CleanerTask $task */
         $task->setDays($submittedData['cleaner']['days']);
